@@ -41,6 +41,11 @@
   border-color: var(--border);
 }
 
+/*
+ * Section-by-section scrolling is handled by components/section-scroller.tsx.
+ * Don't add CSS scroll-snap here: the browser would re-snap every animation
+ * frame and spring short scrolls back to the nearest section.
+ */
 html {
   background: var(--background);
   scroll-behavior: smooth;

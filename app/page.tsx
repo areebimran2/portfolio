@@ -2,16 +2,21 @@ import { ArrowDownIcon, GithubIcon } from "@/components/icons";
 import { ExperienceItem } from "@/components/experience-item";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
+import { SectionScroller } from "@/components/section-scroller";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
 import { portfolio } from "./content";
 
+// Each section fills the viewport and is one stop for SectionScroller.
+const fullScreenSection =
+  "flex min-h-svh flex-col justify-center pt-28 pb-16 sm:pb-20";
+
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="overflow-x-clip">
+      <SectionScroller />
       <SiteHeader
         initials={portfolio.initials}
         name={portfolio.name}
@@ -23,7 +28,8 @@ export default function Home() {
         <section
           id="about"
           aria-labelledby="intro-heading"
-          className="relative flex min-h-[92vh] items-center pt-28 pb-20"
+          data-scroll-section
+          className={fullScreenSection}
         >
           <div className="intro-reveal max-w-3xl">
             <p className="mb-6 flex items-center gap-2.5 font-mono text-xs font-medium tracking-[0.16em] text-primary uppercase">
@@ -83,12 +89,11 @@ export default function Home() {
           </div>
         </section>
 
-        <Separator />
-
         <section
           id="experience"
           aria-labelledby="experience-heading"
-          className="scroll-mt-24 py-24 sm:py-32"
+          data-scroll-section
+          className={fullScreenSection}
         >
           <div id="experience-heading">
             <SectionHeading
@@ -108,12 +113,11 @@ export default function Home() {
           </div>
         </section>
 
-        <Separator />
-
         <section
           id="projects"
           aria-labelledby="projects-heading"
-          className="scroll-mt-24 py-24 sm:py-32"
+          data-scroll-section
+          className={fullScreenSection}
         >
           <div id="projects-heading">
             <SectionHeading
