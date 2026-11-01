@@ -11,11 +11,23 @@ export type Experience = {
   skills: string[];
 };
 
+export type ProjectIconName =
+  | "ship"
+  | "kanban"
+  | "hurricane"
+  | "chef-hat"
+  | "route"
+  | "activity"
+  | "globe"
+  | "chart";
+
 export type Project = {
   name: string;
   description: string;
-  href: string;
+  href?: string;
   technologies: string[];
+  icon: ProjectIconName;
+  placeholder?: boolean;
 };
 
 export type PortfolioContent = {

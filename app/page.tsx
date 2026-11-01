@@ -1,6 +1,6 @@
 import { ArrowDownIcon, GithubIcon } from "@/components/icons";
 import { ExperienceItem } from "@/components/experience-item";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsCarousel } from "@/components/projects-carousel";
 import { SectionHeading } from "@/components/section-heading";
 import { SectionScroller } from "@/components/section-scroller";
 import { SiteHeader } from "@/components/site-header";
@@ -119,18 +119,7 @@ export default function Home() {
           data-scroll-section
           className={fullScreenSection}
         >
-          <div id="projects-heading">
-            <SectionHeading
-              eyebrow="Selected work"
-              title="A few projects I&apos;ve enjoyed bringing to life."
-            />
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {portfolio.projects.map((project, index) => (
-              <ProjectCard key={project.name} project={project} index={index} />
-            ))}
-          </div>
+          <ProjectsCarousel projects={portfolio.projects} />
         </section>
       </main>
     </div>

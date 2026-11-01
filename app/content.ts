@@ -40,6 +40,7 @@ export const portfolio: PortfolioContent = {
         "A cruise administration platform for managing ships, cabin maps, routes, sailings, pricing, reservations, and reporting.",
       href: "https://github.com/areebimran2/CS-CAS",
       technologies: ["Python", "Web platform"],
+      icon: "ship",
     },
     {
       name: "Scrum Team Manager",
@@ -47,6 +48,7 @@ export const portfolio: PortfolioContent = {
         "An AI-assisted workspace designed to make Agile planning and team coordination more direct and efficient.",
       href: "https://github.com/areebimran2/scrum-team-manager",
       technologies: ["Python", "JavaScript", "AI"],
+      icon: "kanban",
     },
     {
       name: "HurriNet",
@@ -54,6 +56,7 @@ export const portfolio: PortfolioContent = {
         "A temporal transformer model for forecasting hurricane factors from statistical data and reanalysis maps.",
       href: "https://github.com/areebimran2/HurriNet",
       technologies: ["Deep learning", "Transformers", "Jupyter"],
+      icon: "hurricane",
     },
     {
       name: "EasyChef",
@@ -61,6 +64,39 @@ export const portfolio: PortfolioContent = {
         "A recipe-sharing application that makes it easy to publish, discover, and organize home cooking ideas.",
       href: "https://github.com/areebimran2/EasyChef",
       technologies: ["JavaScript", "Python", "CSS"],
+      icon: "chef-hat",
+    },
+    {
+      name: "RouteLab",
+      description:
+        "A route-planning concept for comparing paths, travel time, and constraints on an interactive map.",
+      technologies: ["TypeScript", "Maps", "Concept"],
+      icon: "route",
+      placeholder: true,
+    },
+    {
+      name: "Pulseboard",
+      description:
+        "A real-time service health dashboard concept focused on fast incident detection and clear system status.",
+      technologies: ["React", "WebSockets", "Concept"],
+      icon: "activity",
+      placeholder: true,
+    },
+    {
+      name: "Atlas Notes",
+      description:
+        "A searchable knowledge workspace concept for connecting notes, sources, and related ideas.",
+      technologies: ["Next.js", "Search", "Concept"],
+      icon: "globe",
+      placeholder: true,
+    },
+    {
+      name: "Ledgerly",
+      description:
+        "A personal finance dashboard concept for making spending patterns and monthly goals easier to understand.",
+      technologies: ["Data visualization", "Concept"],
+      icon: "chart",
+      placeholder: true,
     },
   ],
 };

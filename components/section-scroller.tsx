@@ -310,11 +310,13 @@ export function SectionScroller() {
 
     // ---- Touch --------------------------------------------------------------
 
+    let touchStartX = 0;
     let touchStartY = 0;
     let touchLastY = 0;
     let touchLastTime = 0;
     let touchVelocity = 0; // px per ms, positive = scrolling down
     let touchAction: Action = "none";
+    let touchAxis: "pending" | "horizontal" | "vertical" = "pending";
     let touchTracking = false;
 
     const onTouchStart = (event: TouchEvent) => {
@@ -324,10 +326,13 @@ export function SectionScroller() {
       // section transition is left to land so a tap never strands the page
       // between sections; a new swipe chains from its destination instead.
       if (animating === "inner") stop();
-      touchStartY = touchLastY = event.touches[0].clientY;
+      const touch = event.touches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touchLastY = touch.clientY;
       touchLastTime = event.timeStamp;
       touchVelocity = 0;
       touchAction = "none";
+      touchAxis = "pending";
     };
 
     const onTouchMove = (event: TouchEvent) => {
@@ -337,7 +342,30 @@ export function SectionScroller() {
         return;
       }
 
-      const y = event.touches[0].clientY;
+      const touch = event.touches[0];
+      const x = touch.clientX;
+      const y = touch.clientY;
+      const horizontalTravel = x - touchStartX;
+      const verticalTravel = y - touchStartY;
+
+      if (touchAxis === "pending") {
+        const distance = Math.max(
+          Math.abs(horizontalTravel),
+          Math.abs(verticalTravel),
+        );
+        if (distance < 8) return;
+        touchAxis =
+          Math.abs(horizontalTravel) > Math.abs(verticalTravel)
+            ? "horizontal"
+            : "vertical";
+      }
+
+      // Horizontal drags belong to components such as the project carousel.
+      if (touchAxis === "horizontal") {
+        touchTracking = false;
+        return;
+      }
+
       const travel = touchStartY - y;
       const delta = touchLastY - y;
       const elapsed = Math.max(1, event.timeStamp - touchLastTime);
