@@ -42,6 +42,7 @@ export type PortfolioContent = {
   name: string;
   initials: string;
   portrait: string;
+  focusStatements: string[];
   githubUrl: string;
   socialLinks: SocialLink[];
   navItems: NavItem[];

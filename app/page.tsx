@@ -1,4 +1,5 @@
 import { ExperienceItem } from "@/components/experience-item";
+import { FocusSignal } from "@/components/focus-signal";
 import { ProfilePortrait } from "@/components/profile-portrait";
 import { ProjectsCarousel } from "@/components/projects-carousel";
 import { SectionHeading } from "@/components/section-heading";
@@ -45,7 +46,9 @@ export default function Home() {
               </h1>
             </div>
 
-            <div className="mt-9 flex w-full justify-center">
+            <FocusSignal statements={portfolio.focusStatements} />
+
+            <div className="mt-7 flex w-full justify-center">
               <SocialBar links={portfolio.socialLinks} />
             </div>
           </div>

@@ -5,6 +5,11 @@ export const portfolio: PortfolioContent = {
   name: "Areeb Imran",
   initials: "AI",
   portrait: "/profile.jpg",
+  focusStatements: [
+    "Building thoughtful full-stack products",
+    "Exploring practical machine learning",
+    "Turning complex problems into clear systems",
+  ],
   githubUrl: "https://github.com/areebimran2",
   // Add `href` once your public LinkedIn URL and preferred email are ready.
   socialLinks: [
