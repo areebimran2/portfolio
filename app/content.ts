@@ -3,7 +3,6 @@ import type { PortfolioContent } from "@/types/portfolio";
 // Keep personal copy and links here so the page layout remains reusable.
 export const portfolio: PortfolioContent = {
   name: "Areeb Imran",
-  initials: "AI",
   portrait: "/profile.jpg",
   focusStatements: [
     "Building thoughtful full-stack products",
@@ -26,22 +25,43 @@ export const portfolio: PortfolioContent = {
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
   ],
+  // Example roles for layout testing; replace these with your verified résumé.
   experience: [
     {
-      role: "Software Engineer",
-      organization: "CSC301 Capstone · University of Toronto",
-      period: "2025 — 2026",
-      summary:
-        "Built an AI-assisted Scrum management platform with a team, focusing on practical workflows for planning, tracking, and delivering software.",
-      skills: ["Python", "JavaScript", "Product engineering"],
+      role: "Software Engineering Intern",
+      organization: "Northstar Labs",
+      location: "Toronto, ON",
+      period: "May 2025 — Aug 2025",
+      details: [
+        "Shipped customer-facing dashboard features with TypeScript, React, and Node.js, working from product requirements through review and release.",
+        "Designed REST endpoints and PostgreSQL queries for operational workflows, with validation and clear error handling at API boundaries.",
+        "Added integration tests and CI checks that caught regressions before deployment and made pull-request reviews more predictable.",
+      ],
+      skills: ["TypeScript", "React", "Node.js", "PostgreSQL"],
     },
     {
-      role: "Machine Learning Engineer",
-      organization: "CSC413 Project · University of Toronto",
-      period: "2026",
-      summary:
-        "Developed HurriNet, a transformer architecture that combines statistical and regional image data to predict hurricane factors over time.",
-      skills: ["Deep learning", "Transformers", "Data modelling"],
+      role: "Full-Stack Developer",
+      organization: "Campus Technology Studio",
+      location: "Mississauga, ON",
+      period: "Sep 2024 — Apr 2025",
+      details: [
+        "Built a responsive scheduling platform for student organizations using Next.js, Tailwind CSS, and a Python API.",
+        "Created reusable interface components and documented common patterns so teammates could deliver consistent screens faster.",
+        "Worked directly with users to simplify booking and approval flows, then translated feedback into focused iterations.",
+      ],
+      skills: ["Next.js", "Python", "Tailwind CSS", "UX"],
+    },
+    {
+      role: "Machine Learning Research Assistant",
+      organization: "Applied Intelligence Lab",
+      location: "Toronto, ON",
+      period: "Jan 2024 — Aug 2024",
+      details: [
+        "Prepared reproducible data pipelines for time-series experiments, including cleaning, feature generation, and dataset versioning.",
+        "Trained and evaluated transformer-based forecasting models in PyTorch, comparing results against established baselines.",
+        "Tracked experiments and summarized findings for weekly reviews, making model trade-offs clear to technical collaborators.",
+      ],
+      skills: ["Python", "PyTorch", "Transformers", "Data pipelines"],
     },
   ],
   projects: [

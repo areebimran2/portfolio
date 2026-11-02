@@ -250,3 +250,52 @@ export function MailIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function PlusIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  );
+}
+
+export function CloseIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="m6 6 12 12M18 6 6 18" />
+    </svg>
+  );
+}
+
+export function ExpandIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7" />
+    </svg>
+  );
+}

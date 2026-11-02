@@ -1,8 +1,7 @@
-import { ExperienceItem } from "@/components/experience-item";
+import { ExperienceSection } from "@/components/experience-section";
 import { FocusSignal } from "@/components/focus-signal";
 import { ProfilePortrait } from "@/components/profile-portrait";
 import { ProjectsCarousel } from "@/components/projects-carousel";
-import { SectionHeading } from "@/components/section-heading";
 import { SectionScroller } from "@/components/section-scroller";
 import { SiteHeader } from "@/components/site-header";
 import { SocialBar } from "@/components/social-bar";
@@ -18,7 +17,6 @@ export default function Home() {
     <div className="overflow-x-clip">
       <SectionScroller />
       <SiteHeader
-        initials={portfolio.initials}
         name={portfolio.name}
         navItems={portfolio.navItems}
         githubUrl={portfolio.githubUrl}
@@ -60,22 +58,7 @@ export default function Home() {
           data-scroll-section
           className={fullScreenSection}
         >
-          <div id="experience-heading">
-            <SectionHeading
-              eyebrow="Experience"
-              title="Learning by building things that have to work."
-            />
-          </div>
-
-          <div>
-            {portfolio.experience.map((experience, index) => (
-              <ExperienceItem
-                key={`${experience.organization}-${experience.role}`}
-                experience={experience}
-                index={index}
-              />
-            ))}
-          </div>
+          <ExperienceSection experiences={portfolio.experience} />
         </section>
 
         <section

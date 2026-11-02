@@ -82,6 +82,12 @@ export function SectionScroller() {
 
     const getSections = () =>
       Array.from(document.querySelectorAll<HTMLElement>(SECTION_SELECTOR));
+    const dialogIsOpen = () =>
+      Boolean(
+        document.querySelector(
+          '[data-slot="dialog-content"][data-state="open"]',
+        ),
+      );
     const viewportHeight = () => window.innerHeight;
     const maxScroll = () =>
       Math.max(0, document.documentElement.scrollHeight - viewportHeight());
@@ -252,6 +258,8 @@ export function SectionScroller() {
     };
 
     const onWheel = (event: WheelEvent) => {
+      // The dialog owns wheel input while experience details are open.
+      if (dialogIsOpen()) return;
       // Ctrl+wheel and trackpad pinch are zoom; horizontal is not ours.
       if (event.defaultPrevented || event.ctrlKey) return;
       if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
@@ -320,6 +328,10 @@ export function SectionScroller() {
     let touchTracking = false;
 
     const onTouchStart = (event: TouchEvent) => {
+      if (dialogIsOpen()) {
+        touchTracking = false;
+        return;
+      }
       touchTracking = event.touches.length === 1;
       if (!touchTracking) return;
       // A finger down halts in-section momentum, like native scrolling. A
@@ -421,6 +433,7 @@ export function SectionScroller() {
         /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
 
     const onKeyDown = (event: KeyboardEvent) => {
+      if (dialogIsOpen()) return;
       if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) {
         return;
       }

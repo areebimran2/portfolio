@@ -6,8 +6,9 @@ export type NavItem = {
 export type Experience = {
   role: string;
   organization: string;
+  location: string;
   period: string;
-  summary: string;
+  details: string[];
   skills: string[];
 };
 
@@ -40,7 +41,6 @@ export type SocialLink = {
 
 export type PortfolioContent = {
   name: string;
-  initials: string;
   portrait: string;
   focusStatements: string[];
   githubUrl: string;
