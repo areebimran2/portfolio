@@ -1,11 +1,10 @@
-import { ArrowDownIcon, GithubIcon } from "@/components/icons";
 import { ExperienceItem } from "@/components/experience-item";
+import { ProfilePortrait } from "@/components/profile-portrait";
 import { ProjectsCarousel } from "@/components/projects-carousel";
 import { SectionHeading } from "@/components/section-heading";
 import { SectionScroller } from "@/components/section-scroller";
 import { SiteHeader } from "@/components/site-header";
-import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { SocialBar } from "@/components/social-bar";
 
 import { portfolio } from "./content";
 
@@ -31,60 +30,23 @@ export default function Home() {
           data-scroll-section
           className={fullScreenSection}
         >
-          <div className="intro-reveal max-w-3xl">
-            <p className="mb-6 flex items-center gap-2.5 font-mono text-xs font-medium tracking-[0.16em] text-primary uppercase">
-              <span className="relative flex size-2" aria-hidden="true">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-20" />
-                <span className="relative inline-flex size-2 rounded-full bg-primary" />
-              </span>
-              {portfolio.eyebrow}
-            </p>
+          <div className="intro-reveal mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+            <ProfilePortrait src={portfolio.portrait} name={portfolio.name} />
 
-            <h1
-              id="intro-heading"
-              className="text-[clamp(3.25rem,10vw,6.75rem)] leading-[0.92] font-semibold tracking-[-0.07em] text-foreground"
-            >
-              Hi, I&apos;m{" "}
-              <span className="text-primary">
-                {portfolio.name.split(" ")[0]}.
-              </span>
-            </h1>
-
-            <p className="mt-8 max-w-2xl text-xl leading-[1.45] font-medium tracking-[-0.02em] text-foreground sm:text-2xl">
-              {portfolio.headline}
-            </p>
-            <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-              {portfolio.introduction}
-            </p>
-
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <a
-                href="#projects"
-                className={buttonVariants({
-                  size: "default",
-                  className: "group",
-                })}
+            <div className="mt-8">
+              <p className="text-[1.75rem] leading-none font-semibold tracking-[-0.025em] text-foreground sm:text-4xl">
+                Hello, I&apos;m
+              </p>
+              <h1
+                id="intro-heading"
+                className="mt-3 text-[clamp(3.5rem,10vw,6.5rem)] leading-none font-bold tracking-[-0.055em] text-primary"
               >
-                View my work
-                <ArrowDownIcon className="size-4 transition-transform group-hover:translate-y-0.5" />
-              </a>
-              <a
-                href={portfolio.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className={buttonVariants({ variant: "outline" })}
-              >
-                <GithubIcon className="size-4" />
-                GitHub
-              </a>
+                {portfolio.name}
+              </h1>
             </div>
 
-            <div className="mt-12 flex max-w-2xl flex-wrap gap-2" aria-label="Core skills">
-              {portfolio.skills.map((skill) => (
-                <Badge key={skill} className="bg-background/70">
-                  {skill}
-                </Badge>
-              ))}
+            <div className="mt-9 flex w-full justify-center">
+              <SocialBar links={portfolio.socialLinks} />
             </div>
           </div>
         </section>

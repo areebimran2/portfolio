@@ -30,15 +30,21 @@ export type Project = {
   placeholder?: boolean;
 };
 
+export type SocialIconName = "github" | "linkedin" | "email";
+
+export type SocialLink = {
+  label: string;
+  href?: string;
+  icon: SocialIconName;
+};
+
 export type PortfolioContent = {
   name: string;
   initials: string;
-  eyebrow: string;
-  headline: string;
-  introduction: string;
+  portrait: string;
   githubUrl: string;
+  socialLinks: SocialLink[];
   navItems: NavItem[];
-  skills: string[];
   experience: Experience[];
   projects: Project[];
 };

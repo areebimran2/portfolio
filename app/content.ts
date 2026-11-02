@@ -4,17 +4,23 @@ import type { PortfolioContent } from "@/types/portfolio";
 export const portfolio: PortfolioContent = {
   name: "Areeb Imran",
   initials: "AI",
-  eyebrow: "Software engineer",
-  headline: "I turn complex ideas into clear, useful software.",
-  introduction:
-    "I build thoughtful digital products across full-stack development and machine learning. I care about simple interfaces, dependable systems, and solving the right problem.",
+  portrait: "/profile.jpg",
   githubUrl: "https://github.com/areebimran2",
+  // Add `href` once your public LinkedIn URL and preferred email are ready.
+  socialLinks: [
+    {
+      label: "GitHub",
+      href: "https://github.com/areebimran2",
+      icon: "github",
+    },
+    { label: "LinkedIn", icon: "linkedin" },
+    { label: "Email", icon: "email" },
+  ],
   navItems: [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
   ],
-  skills: ["TypeScript", "React", "Next.js", "Python", "Machine learning"],
   experience: [
     {
       role: "Software Engineer",
