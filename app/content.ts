@@ -1,24 +1,26 @@
 import type { PortfolioContent } from "@/types/portfolio";
 
-// Keep personal copy and links here so the page layout remains reusable.
 export const portfolio: PortfolioContent = {
   name: "Areeb Imran",
-  portrait: "/profile.jpg",
+  portrait: "/profile.png",
   focusStatements: [
     "Building thoughtful full-stack products",
     "Exploring practical machine learning",
     "Turning complex problems into clear systems",
   ],
   githubUrl: "https://github.com/areebimran2",
-  // Add `href` once your public LinkedIn URL and preferred email are ready.
   socialLinks: [
     {
       label: "GitHub",
       href: "https://github.com/areebimran2",
       icon: "github",
     },
-    { label: "LinkedIn", icon: "linkedin" },
-    { label: "Email", icon: "email" },
+    { label: "LinkedIn",
+      href: "https://www.linkedin.com/in/areeb-imran-16a493237/",
+      icon: "linkedin" },
+    { label: "Email",
+      href: "mailto:areeb.imran@alumni.utoronto.ca",
+      icon: "email" },
   ],
   navItems: [
     { label: "About", href: "#about" },
@@ -66,11 +68,11 @@ export const portfolio: PortfolioContent = {
   ],
   projects: [
     {
-      name: "CS-CAS",
+      name: "Path-Planning Research",
       description:
-        "A cruise administration platform for managing ships, cabin maps, routes, sailings, pricing, reservations, and reporting.",
-      href: "https://github.com/areebimran2/CS-CAS",
-      technologies: ["Python", "Web platform"],
+        "A research project exploring random sampling methods for path planning in mobile robotics.",
+      href: "https://github.com/areebimran2/PathPlanningProject",
+      technologies: ["Python", "Algorithms", "Robotics"],
       icon: "ship",
     },
     {
