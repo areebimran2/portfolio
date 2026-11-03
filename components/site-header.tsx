@@ -1,3 +1,6 @@
+"use client";
+
+import type { MouseEvent } from "react";
 import { FaGithub as GithubIcon } from "react-icons/fa6";
 
 import { buttonVariants } from "@/components/ui/button";
@@ -9,6 +12,16 @@ type SiteHeaderProps = {
   navItems: NavItem[];
   githubUrl: string;
 };
+
+// Scroll to the target section without writing the hash to the URL. Modified
+// clicks (new tab, etc.) and missing targets fall back to native anchor nav.
+function handleNavClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const target = document.getElementById(href.slice(1));
+  if (!target) return;
+  event.preventDefault();
+  target.scrollIntoView();
+}
 
 export function SiteHeader({ name, navItems, githubUrl }: SiteHeaderProps) {
   return (
@@ -26,6 +39,7 @@ export function SiteHeader({ name, navItems, githubUrl }: SiteHeaderProps) {
                 <a
                   className="inline-flex h-9 items-center justify-center rounded-lg px-2 text-xs font-medium whitespace-nowrap text-muted-foreground outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:px-3 sm:text-sm"
                   href={item.href}
+                  onClick={(event) => handleNavClick(event, item.href)}
                 >
                   {item.label}
                 </a>

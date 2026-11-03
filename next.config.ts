@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export", // enable static export
+
+  basePath: "/portfolio",
+
   turbopack: {
     rules: {
       "*.css": {
@@ -9,6 +12,10 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+
+  images: {
+    unoptimized: true // static export incompatible with image optimization
   },
 };
 
