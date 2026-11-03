@@ -86,7 +86,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
           id="projects-heading"
           className="max-w-xl text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl"
         >
-          A few projects I&apos;ve enjoyed bringing to life.
+          A few of my projects.
         </h2>
 
         <div className="flex shrink-0 items-center gap-2">
