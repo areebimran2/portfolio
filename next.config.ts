@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "export", // enable static export
 
   basePath: "/portfolio",
+  assetPrefix: "/portfolio/",
 
   turbopack: {
     rules: {
