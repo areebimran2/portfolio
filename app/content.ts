@@ -2,7 +2,7 @@ import type { PortfolioContent } from "@/types/portfolio";
 
 export const portfolio: PortfolioContent = {
   name: "Areeb Imran",
-  portrait: "/profile.png",
+  portrait: "/portfolio/profile.png",
   focusStatements: [
     "Building thoughtful full-stack products",
     "Exploring practical machine learning",

@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Areeb Imran | Portfolio",
   description: "My personal portfolio.",
   metadataBase: new URL("https://github.com/areebimran2"),
+  icons: {
+    icon: "/portfolio/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
