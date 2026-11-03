@@ -13,16 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Areeb Imran | Software Engineer",
-  description:
-    "The personal portfolio of Areeb Imran, a software engineer working across full-stack development and machine learning.",
+  title: "Areeb Imran | Portfolio",
+  description: "My personal portfolio.",
   metadataBase: new URL("https://github.com/areebimran2"),
-  openGraph: {
-    title: "Areeb Imran | Software Engineer",
-    description:
-      "Selected software engineering experience and projects by Areeb Imran.",
-    type: "website",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

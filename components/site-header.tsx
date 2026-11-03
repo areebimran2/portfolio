@@ -1,4 +1,5 @@
-import { GithubIcon } from "@/components/icons";
+import { FaGithub as GithubIcon } from "react-icons/fa6";
+
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/portfolio";

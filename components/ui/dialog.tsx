@@ -1,9 +1,9 @@
 "use client";
 
+import { X as CloseIcon } from "lucide-react";
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-import { CloseIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 export const Dialog = DialogPrimitive.Root;

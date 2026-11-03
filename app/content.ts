@@ -30,40 +30,32 @@ export const portfolio: PortfolioContent = {
   // Example roles for layout testing; replace these with your verified résumé.
   experience: [
     {
-      role: "Software Engineering Intern",
-      organization: "Northstar Labs",
-      location: "Toronto, ON",
-      period: "May 2025 — Aug 2025",
+      role: "Software Developer",
+      organization: "Apex Modular Construction",
+      location: "Remote",
+      period: "Jul — Sep 2026",
       details: [
-        "Shipped customer-facing dashboard features with TypeScript, React, and Node.js, working from product requirements through review and release.",
-        "Designed REST endpoints and PostgreSQL queries for operational workflows, with validation and clear error handling at API boundaries.",
-        "Added integration tests and CI checks that caught regressions before deployment and made pull-request reviews more predictable.",
+        "Developed production-grade features for a startup PropTech company using TypeScript and React.",
+        "Implemented an interactive 3D model viewer and realtime customizer for prefabricated home models using Three.js.",
+        "Refined the frontend UI/UX to simplify navigation and create a polished, professional visual interface.",
       ],
-      skills: ["TypeScript", "React", "Node.js", "PostgreSQL"],
+      skills: ["Next.js", "TypeScript", "React", "Three.js"],
     },
     {
-      role: "Full-Stack Developer",
-      organization: "Campus Technology Studio",
-      location: "Mississauga, ON",
-      period: "Sep 2024 — Apr 2025",
+      role: "Backend Developer",
+      organization: "Unforgettable Travel Company",
+      location: "Remote",
+      period: "Oct 2025 — Mar 2026",
       details: [
-        "Built a responsive scheduling platform for student organizations using Next.js, Tailwind CSS, and a Python API.",
-        "Created reusable interface components and documented common patterns so teammates could deliver consistent screens faster.",
-        "Worked directly with users to simplify booking and approval flows, then translated feedback into focused iterations.",
+        "Designed and implemented an API, following standard RESTful practices, that is part of a system aiming to" +
+        "streamline and automate the process of assigning cabins to passengers on a cruise ship.",
+        "Translated an existing PostgreSQL schema into maintainable Django models and database migrations.",
+        "Implemented a Two-Factor (SMS or TOTP) authentication flow to maintain sensitive activity.",
+        "Induced sophisticated and robust security precautions within the authentication framework to thwart malicious" +
+        "actors. Such precautions include using unique dynamic identifiers to mitigate enumeration attacks, and the use" +
+        "of HttpOnly cookies for potential XSS attacks."
       ],
-      skills: ["Next.js", "Python", "Tailwind CSS", "UX"],
-    },
-    {
-      role: "Machine Learning Research Assistant",
-      organization: "Applied Intelligence Lab",
-      location: "Toronto, ON",
-      period: "Jan 2024 — Aug 2024",
-      details: [
-        "Prepared reproducible data pipelines for time-series experiments, including cleaning, feature generation, and dataset versioning.",
-        "Trained and evaluated transformer-based forecasting models in PyTorch, comparing results against established baselines.",
-        "Tracked experiments and summarized findings for weekly reviews, making model trade-offs clear to technical collaborators.",
-      ],
-      skills: ["Python", "PyTorch", "Transformers", "Data pipelines"],
+      skills: ["Python", "RESTful API", "PostgreSQL", "Django"],
     },
   ],
   projects: [
@@ -73,7 +65,7 @@ export const portfolio: PortfolioContent = {
         "A research project exploring random sampling methods for path planning in mobile robotics.",
       href: "https://github.com/areebimran2/PathPlanningProject",
       technologies: ["Python", "Algorithms", "Robotics"],
-      icon: "ship",
+      icon: "route",
     },
     {
       name: "Scrum Team Manager",
@@ -100,36 +92,36 @@ export const portfolio: PortfolioContent = {
       icon: "chef-hat",
     },
     {
-      name: "RouteLab",
+      name: "Transaction Search",
       description:
-        "A route-planning concept for comparing paths, travel time, and constraints on an interactive map.",
-      technologies: ["TypeScript", "Maps", "Concept"],
+        "A focused search interface for retrieving and reviewing transaction records through filters and organized results.",
+      href: "https://github.com/areebimran2/transaction-search",
+      technologies: ["Next.js", "HTML"],
       icon: "route",
-      placeholder: true,
     },
-    {
-      name: "Pulseboard",
-      description:
-        "A real-time service health dashboard concept focused on fast incident detection and clear system status.",
-      technologies: ["React", "WebSockets", "Concept"],
-      icon: "activity",
-      placeholder: true,
-    },
-    {
-      name: "Atlas Notes",
-      description:
-        "A searchable knowledge workspace concept for connecting notes, sources, and related ideas.",
-      technologies: ["Next.js", "Search", "Concept"],
-      icon: "globe",
-      placeholder: true,
-    },
-    {
-      name: "Ledgerly",
-      description:
-        "A personal finance dashboard concept for making spending patterns and monthly goals easier to understand.",
-      technologies: ["Data visualization", "Concept"],
-      icon: "chart",
-      placeholder: true,
-    },
+    // {
+    //   name: "Pulseboard",
+    //   description:
+    //     "A real-time service health dashboard concept focused on fast incident detection and clear system status.",
+    //   technologies: ["React", "WebSockets", "Concept"],
+    //   icon: "activity",
+    //   placeholder: true,
+    // },
+    // {
+    //   name: "Atlas Notes",
+    //   description:
+    //     "A searchable knowledge workspace concept for connecting notes, sources, and related ideas.",
+    //   technologies: ["Next.js", "Search", "Concept"],
+    //   icon: "globe",
+    //   placeholder: true,
+    // },
+    // {
+    //   name: "Ledgerly",
+    //   description:
+    //     "A personal finance dashboard concept for making spending patterns and monthly goals easier to understand.",
+    //   technologies: ["Data visualization", "Concept"],
+    //   icon: "chart",
+    //   placeholder: true,
+    // },
   ],
 };

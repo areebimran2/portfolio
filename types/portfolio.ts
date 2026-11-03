@@ -13,7 +13,6 @@ export type Experience = {
 };
 
 export type ProjectIconName =
-  | "ship"
   | "kanban"
   | "hurricane"
   | "chef-hat"

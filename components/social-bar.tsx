@@ -1,17 +1,13 @@
-import type { ComponentType, SVGProps } from "react";
-
+import { Mail as MailIcon } from "lucide-react";
 import {
-  GithubIcon,
-  LinkedinIcon,
-  MailIcon,
-} from "@/components/icons";
-import { cn } from "@/lib/utils";
-import type { SocialIconName, SocialLink } from "@/types/portfolio";
+  FaGithub as GithubIcon,
+  FaLinkedinIn as LinkedinIcon,
+} from "react-icons/fa6";
 
-const socialIcons: Record<
-  SocialIconName,
-  ComponentType<SVGProps<SVGSVGElement>>
-> = {
+import { cn } from "@/lib/utils";
+import type { SocialLink } from "@/types/portfolio";
+
+const socialIcons = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
   email: MailIcon,

@@ -95,14 +95,14 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
         </div>
       </div>
 
-      <CarouselContent>
+      <CarouselContent className="py-1">
         {pages.map((page, pageIndex) => (
           <CarouselItem
             key={page.map((project) => project.name).join("-")}
             aria-label={`Project page ${pageIndex + 1} of ${pages.length}`}
             className="flex"
           >
-            <div className="grid w-full auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid w-full content-start grid-cols-1 gap-4 sm:grid-cols-2">
               {page.map((project) => (
                 <ProjectCard key={project.name} project={project} />
               ))}

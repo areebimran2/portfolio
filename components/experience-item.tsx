@@ -1,6 +1,7 @@
 "use client";
 
-import { ExpandIcon } from "@/components/icons";
+import { Expand as ExpandIcon } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,

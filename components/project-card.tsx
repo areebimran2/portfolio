@@ -1,16 +1,19 @@
-import type { ComponentType, SVGProps } from "react";
+import type { LucideIcon } from "lucide-react";
+import type { IconType} from "react-icons";
+import {
+  Activity as ActivityIcon,
+  ArrowUpRight as ArrowUpRightIcon,
+  ChartNoAxesCombined as ChartIcon,
+  ChefHat as ChefHatIcon,
+  Columns3 as KanbanIcon,
+  Globe2 as GlobeIcon,
+  Route as RouteIcon,
+} from "lucide-react";
 
 import {
-  ActivityIcon,
-  ArrowUpRightIcon,
-  ChartIcon,
-  ChefHatIcon,
-  GlobeIcon,
-  HurricaneIcon,
-  KanbanIcon,
-  RouteIcon,
-  ShipIcon,
-} from "@/components/icons";
+  PiHurricane as HurricaneIcon,
+} from "react-icons/pi";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { Project, ProjectIconName } from "@/types/portfolio";
@@ -19,11 +22,7 @@ type ProjectCardProps = {
   project: Project;
 };
 
-const projectIcons: Record<
-  ProjectIconName,
-  ComponentType<SVGProps<SVGSVGElement>>
-> = {
-  ship: ShipIcon,
+const projectIcons: Record<ProjectIconName, LucideIcon | IconType> = {
   kanban: KanbanIcon,
   hurricane: HurricaneIcon,
   "chef-hat": ChefHatIcon,
