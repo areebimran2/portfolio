@@ -47,12 +47,12 @@ export const portfolio: PortfolioContent = {
       location: "Remote",
       period: "Oct 2025 — Mar 2026",
       details: [
-        "Designed and implemented an API, following standard RESTful practices, that is part of a system aiming to" +
+        "Designed and implemented an API, following standard RESTful practices, that is part of a system aiming to " +
         "streamline and automate the process of assigning cabins to passengers on a cruise ship.",
         "Translated an existing PostgreSQL schema into maintainable Django models and database migrations.",
         "Implemented a Two-Factor (SMS or TOTP) authentication flow to maintain sensitive activity.",
-        "Induced sophisticated and robust security precautions within the authentication framework to thwart malicious" +
-        "actors. Such precautions include using unique dynamic identifiers to mitigate enumeration attacks, and the use" +
+        "Induced sophisticated and robust security precautions within the authentication framework to thwart malicious " +
+        "actors. Such precautions include using unique dynamic identifiers to mitigate enumeration attacks, and the use " +
         "of HttpOnly cookies for potential XSS attacks."
       ],
       skills: ["Python", "RESTful API", "PostgreSQL", "Django"],

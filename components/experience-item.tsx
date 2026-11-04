@@ -62,8 +62,12 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
         <DialogHeader>
           <DialogTitle>{experience.role}</DialogTitle>
           <p className="font-medium text-primary">{experience.organization}</p>
-          <DialogDescription>
-            {experience.location} · {experience.period}
+          <DialogDescription className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono">
+            <span>{experience.location}</span>
+            <span aria-hidden="true" className="text-border">
+              /
+            </span>
+            <span>{experience.period}</span>
           </DialogDescription>
         </DialogHeader>
 
