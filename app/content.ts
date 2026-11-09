@@ -16,7 +16,7 @@ export const portfolio: PortfolioContent = {
       icon: "github",
     },
     { label: "LinkedIn",
-      href: "https://www.linkedin.com/in/areeb-imran-16a493237/",
+      href: "https://www.linkedin.com/in/areebimran2",
       icon: "linkedin" },
     { label: "Email",
       href: "mailto:areeb.imran@alumni.utoronto.ca",
@@ -97,7 +97,7 @@ export const portfolio: PortfolioContent = {
         "A focused search interface for retrieving and reviewing transaction records through filters and organized results.",
       href: "https://github.com/areebimran2/transaction-search",
       technologies: ["Next.js", "HTML"],
-      icon: "route",
+      icon: "transaction",
     },
     // {
     //   name: "Pulseboard",

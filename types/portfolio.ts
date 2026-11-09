@@ -19,7 +19,8 @@ export type ProjectIconName =
   | "route"
   | "activity"
   | "globe"
-  | "chart";
+  | "chart"
+  | "transaction";
 
 export type Project = {
   name: string;

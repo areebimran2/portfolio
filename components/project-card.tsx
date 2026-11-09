@@ -10,9 +10,9 @@ import {
   Route as RouteIcon,
 } from "lucide-react";
 
-import {
-  PiHurricane as HurricaneIcon,
-} from "react-icons/pi";
+import { PiHurricane as HurricaneIcon } from "react-icons/pi";
+import { TbTransactionDollar as TransactionIcon } from "react-icons/tb";
+
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -24,12 +24,14 @@ type ProjectCardProps = {
 
 const projectIcons: Record<ProjectIconName, LucideIcon | IconType> = {
   kanban: KanbanIcon,
-  hurricane: HurricaneIcon,
   "chef-hat": ChefHatIcon,
   route: RouteIcon,
   activity: ActivityIcon,
   globe: GlobeIcon,
   chart: ChartIcon,
+
+  hurricane: HurricaneIcon,
+  transaction: TransactionIcon,
 };
 
 const wrapperClassName =
